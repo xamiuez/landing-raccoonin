@@ -1,0 +1,23 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-mulish-regular {
+    font-family: "Mulish-Regular";
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-poppins-semibold {
+    font-family: "Poppins-SemiBold";
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-poppins-bold {
+    font-family: "Poppins-Bold";
+    font-weight: 700;
+    font-style: normal;
+}

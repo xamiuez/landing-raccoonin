@@ -1,0 +1,185 @@
+.u-no-underline {
+    text-decoration: none;
+}
+
+// Отсутствие рамки
+.u-no-border {
+    border: none;
+}
+
+.u-rounded-lg {
+    border-radius: 24px;
+}
+.u-text-white{
+    color: $color-white;
+}
+
+
+// ========== BEM BLOCKS ==========
+.button {
+    text-decoration: none; // for links-btn
+    @include flex-center;
+    @include font-poppins-semibold;
+    width: clamp(10rem, 6.55rem + 9.6vw, 13.75rem);
+    height: clamp(3.125rem, 2.55rem + 1.6vw, 3.75rem);
+    border-radius: 16px;
+    &--yellow {
+        background-color: $color-sand;
+        &:hover{
+            background-color: $color-sand-hover; // !
+        }
+    }
+    &--white {
+        background-color: $color-white;
+        &:hover{
+            background-color: $color-white-hover; // !
+        }
+    }
+    transition: all 0.15s ease-in-out 0s; 
+        &:hover{
+            transform: scale(1.05);
+        }
+    &--gap-sm{
+        gap: 8px;
+    }
+    &--gap-md{
+        gap: 12px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        &--gray{
+            color: $color-slate;
+        }
+    }
+    &__label{
+        @include font-mulish-regular;
+        font-size: 12px;
+    }
+    &__store{
+        font-size: 16px;
+    }
+}
+
+.container {
+    width: 1280px;
+    margin-inline: auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: clamp(7.5rem, 1.75rem + 16vw, 13.75rem);
+    &__block{
+        height: clamp(8rem, 2.25rem + 16vw, 14.25rem);
+        width: clamp(8rem, 2.25rem + 16vw, 14.25rem);
+        @include flex-center;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        &--orange{
+            background-color: $color-coral;
+            &:hover{
+                background-color: $color-coral-hover;
+            }
+        }
+        &--white{
+            background-color: $color-peach;
+             &:hover{
+                background-color: $color-peach-hover;
+            }
+        }
+        &--yellow{
+            background-color: $color-gold-light;
+             &:hover{
+                background-color: $color-gold-hover;
+            }
+        }
+    }
+    &__image{
+        height: auto;
+        width: 65%;
+    }
+    &__title{
+        @include font-poppins-semibold;
+        font-size: clamp(1rem, 0.7rem + 0.96vw, 1.75rem);
+        line-height: 130%;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    &__subtitle{
+        font-size: clamp(0.813rem, 0.64rem + 0.48vw, 1rem);
+        text-align: center;
+    }
+}
+
+.advice-box{
+    width: clamp(18.75rem, 8rem + 50%, 31.25rem);
+    padding-block: 10px;
+    background-color: $color-white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    &__block{
+        height: 60px;
+        width: 60px;
+        border-radius: 15px;
+        @include flex-center;
+        margin-right: 20px;
+        &--orange{
+            background-color: $color-coral;
+            &:hover{
+                background-color: $color-coral-hover;
+            }
+        }
+        &--green{
+            background-color: $color-teal;
+            &:hover{
+                background-color: $color-teal-hover;
+            }
+        }
+        &--peach{
+            background-color: $color-peach;
+            &:hover{
+                background-color: $color-peach-hover;
+            }
+        }
+    }
+    &__text{
+        font-size: 21px;
+        color: $color-slate;
+    }
+}
+
+.world-box{
+    width: clamp(7rem, 5.48rem + 15.36vw, 17rem);
+    background-color: $color-block-dark;
+    border-radius: 20px;
+    &__image{
+        margin-bottom: clamp(0.938rem, 0.075rem + 2.4vw, 1.875rem);
+        height: auto;
+        width: 100%;
+    }
+    &__text-block{
+        padding-inline: 30px;
+    }
+    &__title{
+        @include  font-poppins-semibold;
+        font-size: clamp(1.375rem, 1.03rem + 0.96vw, 1.75rem);
+        line-height: 130%;
+        margin-bottom: 12px;
+    }
+    &__subtitle{
+        font-size: clamp(0.938rem, 0.593rem + 0.96vw, 1.313rem);
+        line-height: 150%;
+    }
+}
+// DYNAMIC
+.focus-visible{
+    &:focus-visible{
+        outline: 2px solid $color-primary-blue;
+        outline-offset: 4px;
+    }
+}
