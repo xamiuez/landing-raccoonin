@@ -44,4 +44,4 @@ git clone https://github.com/xamiuez/landing-raccoonin.git
 cd landing-raccoonin
 ```
 
-**открыть `src/index.html` в браузере**логично не переключается в колонку на мобиле
+**открыть `src/index.html` в браузере**я в колонку на мобиле
